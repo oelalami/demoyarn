@@ -1,0 +1,21 @@
+pipeline {
+   agent  any
+   
+   stages {
+      stage ("frontend") {
+	  
+	      steps {
+		      echo 'run the frontend'
+			  nodejs('Node-10.17')
+			  bat 'npm install'
+	      }
+      }
+	  }
+	  stage ("backend") {
+	
+	      steps {
+		     echo 'Deploying the application'
+	      }
+      }
+   }
+}
